@@ -18,7 +18,7 @@ class Config(object):
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     SESSIONS = "./SESSIONS"
 
-    AUTH_USERS = os.environ.get('AUTH_USERS', '6488911325').split(',')
+    AUTH_USERS = os.environ.get('AUTH_USERS', '6803505727').split(',')
     for i in range(len(AUTH_USERS)):
         AUTH_USERS[i] = int(AUTH_USERS[i])
 
@@ -26,7 +26,7 @@ class Config(object):
     for i in range(len(GROUPS)):
         GROUPS[i] = int(GROUPS[i])
 
-    LOG_CH = os.environ.get("LOG_CH", "-1002059340064")
+    LOG_CH = os.environ.get("LOG_CH", "-1002333723762)
 
 # TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.
 logging.basicConfig(
@@ -50,7 +50,7 @@ LOGGER.info("live log streaming to telegram.")
 
 # Store
 class Store(object):
-    CPTOKEN = "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzNjkyMTIsIm9yZ0lkIjoyNjA1LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwODI3NzQyODkiLCJuYW1lIjoiQWNlIiwiZW1haWwiOm51bGwsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjpudWxsLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpYXQiOjE2NDMyODE4NzcsImV4cCI6MTY0Mzg4NjY3N30.hM33P2ai6ivdzxPPfm01LAd4JWv-vnrSxGXqvCirCSpUfhhofpeqyeHPxtstXwe0"
+    CPTOKEN = "eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6ODk2Njg4OTEsIm9yZ0lkIjo2NzQ2LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTkxNDUxMTEzMDQiLCJuYW1lIjoiRGlwYWsgR2F2aXQiLCJlbWFpbCI6bnVsbCwiaXNJbnRlcm5hdGlvbmFsIjowLCJkZWZhdWx0TGFuZ3VhZ2UiOiJFTiIsImNvdW50cnlDb2RlIjoiSU4iLCJjb3VudHJ5SVNPIjoiOTEiLCJ0aW1lem9uZSI6IkdNVCs1OjMwIiwiaXNEaXkiOnRydWUsIm9yZ0NvZGUiOiJub2VxdyIsImlzRGl5U3ViYWRtaW4iOjAsImZpbmdlcnByaW50SWQiOiJjZWEyNjRmNDIzNGE0YTQ0ZjdhMDRjNTQxNDY3ZDU2OCIsImlhdCI6MTczOTQzNzU5NCwiZXhwIjoxNzQwMDQyMzk0fQ.20b8lkA5BSbI0VXCWIvdCV87SYWSBfxWz8ZZdaNOS0pKe2UEB2S1ZuxdAMx2M8Eu"
     SPROUT_URL = "https://discuss.oliveboard.in/"
     ADDA_TOKEN = ""
     THUMB_URL = "https://telegra.ph/file/84870d6d89b893e59c5f0.jpg"
