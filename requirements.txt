@@ -6,7 +6,6 @@ aiohttp
 aiofiles
 asyncio
 humanize
-gunuc
 wget
 yt-dlp
 hachoir
