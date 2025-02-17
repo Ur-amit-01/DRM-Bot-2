@@ -188,21 +188,11 @@ class ParseLink(object):
         return url
 
     def is_pw(url):
-        """
-        Sample Link :- https://d1d34p8vz63oiq.cloudfront.net/8eca5705-a305-4c1d-863f-a5b101c1983a/master.m3u8
-        """
-        r_code = requests.get(url=url)
-        print(r_code)
-        if r_code.status_code != 200:
-            link = f'https://d3nzo6itypaz07.cloudfront.net/{url.split("/")[3]}/master.m3u8'
-            print(link)
-            r_code1 = requests.get(url=link)
-            if r_code1.status_code == 200:
-                return link
-        else:
-            link = url
-            return link
-        
+        if "/master.mpd" in url:
+            id = url.split("/")[-2]
+            return f"https://madxapi-d0cbf6ac738c.herokuapp.com/{id}/master.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDAyNDM0MjguMTI3LCJkYXRhIjp7Il9pZCI6IjYyM2ZjYjY5YjYxZTYzMDAxMWYyZWYzNiIsInVzZXJuYW1lIjoiOTYyMjE5NDczNCIsImZpcnN0TmFtZSI6Ik1vaGQiLCJsYXN0TmFtZSI6IlJpendhbiIsIm9yZ2FuaXphdGlvbiI6eyJfaWQiOiI1ZWIzOTNlZTk1ZmFiNzQ2OGE3OWQxODkiLCJ3ZWJzaXRlIjoicGh5c2ljc3dhbGxhaC5jb20iLCJuYW1lIjoiUGh5c2ljc3dhbGxhaCJ9LCJlbWFpbCI6Im1yaXp1dXUxMjNAZ21haWwuY29tIiwicm9sZXMiOlsiNWIyN2JkOTY1ODQyZjk1MGE3NzhjNmVmIl0sImNvdW50cnlHcm91cCI6IklOIiwidHlwZSI6IlVTRVIifSwiaWF0IjoxNzM5NjM4NjI4fQ.D4cLcAmTWnB_tIVFBmG7f7ZCkGPmLZbMNpwDfj6uGSg"
+
+        return url
     
     def topranker_link(url: str):
         host = f"https://{url.split('/')[2]}"
