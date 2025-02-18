@@ -19,5 +19,5 @@ RUN apt-get install -y aria2
 RUN apt -qq update && apt -qq install -y git wget pv jq python3-dev ffmpeg mediainfo
 RUN apt install ffmpeg
 RUN pip3 install -r requirements.txt
-CMD gunicorn app:app & python3 main.py
+CMD ["sh", "start.sh"]
 #!git clone https://github.com/axiomatic-systems/Bento4.git && cd Bento4 && apt-get -y install cmake && mkdir cmakebuild && cd cmakebuild/ && cmake -DCMAKE_BUILD_TYPE=Release .. && make && make install
